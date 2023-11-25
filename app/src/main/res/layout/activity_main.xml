@@ -35,6 +35,7 @@
         android:layout_width="251dp"
         android:layout_height="50dp"
         android:textSize="17sp"
+        android:background="@color/white"
         android:layout_gravity="center" />
 
     <Button
