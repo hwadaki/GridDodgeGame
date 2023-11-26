@@ -16,7 +16,6 @@ public class EndActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //getWindow().addFlags(WindowManager.LayoutParams.FLAG_SECURE);
         setContentView(R.layout.activity_end);
 
         restartBtn = findViewById(R.id.restartBtn);
