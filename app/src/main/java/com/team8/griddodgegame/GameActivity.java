@@ -25,13 +25,32 @@ public class GameActivity extends AppCompatActivity {
 
         switch (direction){
             case 1: //위로
-                for(int i=0;i<gridArray.length;i++){
+                for(int i=0;i<gridArray.length-1;i++){ //마지막줄 제외
                     for(int j=0;j<gridArray[0].length;j++){
                         gridArray[i][j] = gridArray[i+1][j];
                     }
                 }
-                int randomIndex = rand.nextInt(gridArray[0].length);
+                Arrays.fill(gridArray[gridArray.length-1],0);
+                break;
 
+            case 2: //오른쪽으로
+                for(int j=gridArray[0].length-1;j>0;j--){
+                    for(int i=0; i<gridArray.length; i++){
+                        gridArray[i][j] = gridArray[i-1][j];
+                    }
+                }
+                for(int i=0; i<gridArray.length; i++){
+                    gridArray[i][0] = 0;
+                }
+                break;
+
+            case 3: //밑으로
+                for(int i=gridArray.length-1;i>0;i--){ //마지막줄 제외
+                    for(int j=0;j<gridArray[0].length;j++){
+                        gridArray[i][j] = gridArray[i+1][j];
+                    }
+                }
+                Arrays.fill(gridArray[gridArray.length-1],0);
                 break;
         }
 
