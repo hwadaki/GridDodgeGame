@@ -3,30 +3,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/background_end"
+    >
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:textSize="40sp"
-        android:layout_marginTop="100dp"
-        android:text="최종 결과!" />
+        android:textSize="50sp"
+        android:layout_marginTop="450dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:text="Game over!" />
 
-    <ImageView
-        android:id="@+id/finalScore"
-        android:layout_width="match_parent"
-        android:layout_height="400dp"
-        android:layout_gravity="center"
-        android:src="@drawable/ic_launcher_background" />
-
-    <Button
-        android:id="@+id/restartBtn"
+    <TextView
+        android:id="@+id/scoreText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:textSize="30sp"
-        android:text="다시하기" />
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="4dp"
+        android:textColor="@color/white"
+        android:text="000"
+        android:textStyle="bold"
+        android:textSize="50sp" />
+
+    <ImageButton
+        android:id="@+id/restartBtn"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:src="@drawable/restart"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY" />
 
 
 </LinearLayout>
