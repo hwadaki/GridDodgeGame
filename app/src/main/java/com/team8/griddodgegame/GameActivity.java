@@ -101,6 +101,21 @@ public class GameActivity extends AppCompatActivity {
         }
     };
 
+    public int countEnemy(int[][] array2d){
+        int enemy=0;
+
+        for(int i=0;i<array2d.length;i++){ //마지막줄 제외
+            for(int j=0;j<array2d[0].length;j++){
+                if(array2d[i][j] != 0 && array2d[i][j] != -1){
+                    enemy++;
+                }
+            }
+        }
+
+        return enemy;
+    };
+
+
     public boolean gridMerge(int x, int y, int playerDirection){ //그리드 병합 후, 닿았는 지 안 닿았는 지 여부 반환
         boolean touchedTF = false;
 
@@ -301,7 +316,10 @@ public class GameActivity extends AppCompatActivity {
                         }
 
                         if(playerX==i && playerY==j){
-                            gridButton.setImageResource(R.drawable.player);
+                            if(damagedTF)
+                                gridButton.setImageResource(R.drawable.player_damaged);
+                            else
+                                gridButton.setImageResource(R.drawable.player);
                         }
                     }
                 }
@@ -331,7 +349,7 @@ public class GameActivity extends AppCompatActivity {
                     }
                     System.out.println(heartNum);
                 } else{ //안 닿았을 때
-                    score += (GridTotal.length*GridTotal[0].length- Collections.frequency(Arrays.asList(GridTotal),0));
+                    score += countEnemy(GridTotal);
                     scoreText.setText("점수 : "+score);
                     //+발걸음 소리 재생
                 }
@@ -376,7 +394,10 @@ public class GameActivity extends AppCompatActivity {
                         }
 
                         if(playerX==i && playerY==j){
-                            gridButton.setImageResource(R.drawable.player);
+                            if(damagedTF)
+                                gridButton.setImageResource(R.drawable.player_damaged);
+                            else
+                                gridButton.setImageResource(R.drawable.player);
                         }
                     }
                 }
@@ -406,7 +427,7 @@ public class GameActivity extends AppCompatActivity {
                     }
                     System.out.println(heartNum);
                 } else{ //안 닿았을 때
-                    score += (GridTotal.length*GridTotal[0].length- Collections.frequency(Arrays.asList(GridTotal),0));
+                    score += countEnemy(GridTotal);
                     scoreText.setText("점수 : "+score);
                     //+발걸음 소리 재생
                 }
@@ -451,7 +472,10 @@ public class GameActivity extends AppCompatActivity {
                         }
 
                         if(playerX==i && playerY==j){
-                            gridButton.setImageResource(R.drawable.player);
+                            if(damagedTF)
+                                gridButton.setImageResource(R.drawable.player_damaged);
+                            else
+                                gridButton.setImageResource(R.drawable.player);
                         }
                     }
                 }
@@ -481,7 +505,7 @@ public class GameActivity extends AppCompatActivity {
                     }
                     System.out.println(heartNum);
                 } else{ //안 닿았을 때
-                    score += (GridTotal.length*GridTotal[0].length- Collections.frequency(Arrays.asList(GridTotal),0));
+                    score += countEnemy(GridTotal);
                     scoreText.setText("점수 : "+score);
                     //+발걸음 소리 재생
                 }
@@ -526,7 +550,10 @@ public class GameActivity extends AppCompatActivity {
                         }
 
                         if(playerX==i && playerY==j){
-                            gridButton.setImageResource(R.drawable.player);
+                            if(damagedTF)
+                                gridButton.setImageResource(R.drawable.player_damaged);
+                            else
+                                gridButton.setImageResource(R.drawable.player);
                         }
                     }
                 }
@@ -556,7 +583,7 @@ public class GameActivity extends AppCompatActivity {
                     }
                     System.out.println(heartNum);
                 } else{ //안 닿았을 때
-                    score += ((GridTotal.length*GridTotal[0].length)-Collections.frequency(Arrays.asList(GridTotal),0));
+                    score += countEnemy(GridTotal);
                     scoreText.setText("점수 : "+score);
                     //+발걸음 소리 재생
                 }
