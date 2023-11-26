@@ -1,6 +1,8 @@
 package com.team8.griddodgegame;
 
 import android.content.Intent;
+import android.media.AudioManager;
+import android.media.SoundPool;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -13,6 +15,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Random;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class GameActivity extends AppCompatActivity {
     int[][] GridTotal = new int[8][8];
@@ -171,15 +175,20 @@ public class GameActivity extends AppCompatActivity {
 
     ImageButton upKey, leftKey, rightKey, downKey;
     ImageView heart1, heart2, heart3;
-    TextView scoreText;
+    private TextView scoreText;
 
     int heartNum;
 
-    int score = 0;
+    private int score = 0;
     int enemyDensity;
     int playerX, playerY;
 
     boolean damagedTF;
+
+    SoundPool soundPool;
+    int soundEnding, soundBoom, soundDamage, soundFoot;
+
+    Timer gameTimer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -195,6 +204,12 @@ public class GameActivity extends AppCompatActivity {
         heart2 = findViewById(R.id.heart2);
         heart3 = findViewById(R.id.heart3);
         scoreText = findViewById(R.id.scoreText);
+
+        soundPool = new SoundPool(5, AudioManager.STREAM_MUSIC,0);	//작성
+        soundEnding = soundPool.load(this,R.raw.ending,1);
+        soundBoom = soundPool.load(this,R.raw.boom,1);
+        soundDamage = soundPool.load(this,R.raw.damage,1);
+        soundFoot = soundPool.load(this,R.raw.foot,1);
 
         for(int i=0;i<GridTotal.length;i++){
             Arrays.fill(GridUp[0],0);
@@ -279,6 +294,9 @@ public class GameActivity extends AppCompatActivity {
             }
         }
 
+        gameTimer = new Timer();
+        gameTimer.schedule(new CustomTimer(),2000,1000);
+
         upKey.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -310,6 +328,7 @@ public class GameActivity extends AppCompatActivity {
                                 break;
                             case -1: //boom
                                 gridButton.setImageResource(R.drawable.boom);
+                                soundPool.play(soundBoom,1f,1f,1,0,1f);
                                 break;
                             default:
                                 break;
@@ -337,10 +356,12 @@ public class GameActivity extends AppCompatActivity {
                                 break;
                         }
                         //+닿는 소리 재생
+                        soundPool.play(soundDamage,1f,1f,1,0,1f);
                     }
                     else{
                         heart1.setImageResource(R.drawable.heart_none);
-                        //+게임오버 소리 재생
+
+                        soundPool.play(soundEnding,1f,1f,1,0,1f);
 
                         Intent intent = new Intent(getApplicationContext(), EndActivity.class);
                         intent.putExtra("score",score);
@@ -351,7 +372,7 @@ public class GameActivity extends AppCompatActivity {
                 } else{ //안 닿았을 때
                     score += countEnemy(GridTotal);
                     scoreText.setText("점수 : "+score);
-                    //+발걸음 소리 재생
+                    soundPool.play(soundFoot,1f,1f,1,0,1f);
                 }
 
             }
@@ -388,6 +409,7 @@ public class GameActivity extends AppCompatActivity {
                                 break;
                             case -1: //boom
                                 gridButton.setImageResource(R.drawable.boom);
+                                soundPool.play(soundBoom,1f,1f,1,0,1f);
                                 break;
                             default:
                                 break;
@@ -415,10 +437,12 @@ public class GameActivity extends AppCompatActivity {
                                 break;
                         }
                         //+닿는 소리 재생
+                        soundPool.play(soundDamage,1f,1f,1,0,1f);
                     }
                     else{
                         heart1.setImageResource(R.drawable.heart_none);
-                        //+게임오버 소리 재생
+
+                        soundPool.play(soundEnding,1f,1f,1,0,1f);
 
                         Intent intent = new Intent(getApplicationContext(), EndActivity.class);
                         intent.putExtra("score",score);
@@ -429,7 +453,7 @@ public class GameActivity extends AppCompatActivity {
                 } else{ //안 닿았을 때
                     score += countEnemy(GridTotal);
                     scoreText.setText("점수 : "+score);
-                    //+발걸음 소리 재생
+                    soundPool.play(soundFoot,1f,1f,1,0,1f);
                 }
 
             }
@@ -466,6 +490,7 @@ public class GameActivity extends AppCompatActivity {
                                 break;
                             case -1: //boom
                                 gridButton.setImageResource(R.drawable.boom);
+                                soundPool.play(soundBoom,1f,1f,1,0,1f);
                                 break;
                             default:
                                 break;
@@ -493,10 +518,12 @@ public class GameActivity extends AppCompatActivity {
                                 break;
                         }
                         //+닿는 소리 재생
+                        soundPool.play(soundDamage,1f,1f,1,0,1f);
                     }
                     else{
                         heart1.setImageResource(R.drawable.heart_none);
-                        //+게임오버 소리 재생
+
+                        soundPool.play(soundEnding,1f,1f,1,0,1f);
 
                         Intent intent = new Intent(getApplicationContext(), EndActivity.class);
                         intent.putExtra("score",score);
@@ -507,7 +534,7 @@ public class GameActivity extends AppCompatActivity {
                 } else{ //안 닿았을 때
                     score += countEnemy(GridTotal);
                     scoreText.setText("점수 : "+score);
-                    //+발걸음 소리 재생
+                    soundPool.play(soundFoot,1f,1f,1,0,1f);
                 }
 
             }
@@ -544,6 +571,7 @@ public class GameActivity extends AppCompatActivity {
                                 break;
                             case -1: //boom
                                 gridButton.setImageResource(R.drawable.boom);
+                                soundPool.play(soundBoom,1f,1f,1,0,1f);
                                 break;
                             default:
                                 break;
@@ -571,10 +599,12 @@ public class GameActivity extends AppCompatActivity {
                                 break;
                         }
                         //+닿는 소리 재생
+                        soundPool.play(soundDamage,1f,1f,1,0,1f);
                     }
                     else{
                         heart1.setImageResource(R.drawable.heart_none);
-                        //+게임오버 소리 재생
+
+                        soundPool.play(soundEnding,1f,1f,1,0,1f);
 
                         Intent intent = new Intent(getApplicationContext(), EndActivity.class);
                         intent.putExtra("score",score);
@@ -585,11 +615,25 @@ public class GameActivity extends AppCompatActivity {
                 } else{ //안 닿았을 때
                     score += countEnemy(GridTotal);
                     scoreText.setText("점수 : "+score);
-                    //+발걸음 소리 재생
+                    soundPool.play(soundFoot,1f,1f,1,0,1f);
                 }
 
             }
         });
 
+    }
+
+    class CustomTimer extends TimerTask {
+        @Override
+        public void run(){
+            runOnUiThread(new Runnable(){
+                @Override
+                public void run() {
+                    if(score>0){
+                        scoreText.setText("점수 : "+--score);
+                    }
+                }
+            });
+        }
     }
 }

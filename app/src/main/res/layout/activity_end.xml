@@ -15,7 +15,8 @@
         android:layout_marginTop="450dp"
         android:textColor="@color/white"
         android:textStyle="bold"
-        android:text="Game over!" />
+        android:text="Game over!"
+        android:fontFamily="@font/puradak_gentle_gothic"/>
 
     <TextView
         android:id="@+id/scoreText"
@@ -25,7 +26,8 @@
         android:layout_marginTop="8dp"
         android:layout_marginRight="4dp"
         android:textColor="@color/white"
-        android:text="000"
+        android:text="000점"
+        android:fontFamily="@font/puradak_gentle_gothic"
         android:textStyle="bold"
         android:textSize="50sp" />
 

@@ -27,6 +27,8 @@ public class EndActivity extends AppCompatActivity {
 
         scoreText.setText(score+"점");
 
+
+
         restartBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

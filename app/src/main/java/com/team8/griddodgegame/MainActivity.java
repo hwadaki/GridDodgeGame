@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
                 this,
                 R.array.level,
-                android.R.layout.simple_spinner_item
+                R.layout.custom_spinner_item
         );
 
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
