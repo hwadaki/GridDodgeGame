@@ -9,11 +9,12 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Spinner;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button StartBtn;
+    ImageButton StartBtn;
     Spinner spinnerLevel;
 
     int gameLevel;
@@ -24,7 +25,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         StartBtn = findViewById(R.id.startBtn);
-        StartBtn.setBackgroundColor(Color.RED);
         spinnerLevel = findViewById(R.id.selectLevel);
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(

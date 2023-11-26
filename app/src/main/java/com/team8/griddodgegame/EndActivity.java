@@ -23,6 +23,9 @@ public class EndActivity extends AppCompatActivity {
 
 
         Intent intent = getIntent();
+        int score = intent.getIntExtra("score",0);
+
+        scoreText.setText(score+"점");
 
         restartBtn.setOnClickListener(new View.OnClickListener() {
             @Override

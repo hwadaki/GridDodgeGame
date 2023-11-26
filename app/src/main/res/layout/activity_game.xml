@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="@drawable/woodfloor"
+    >
+<GridLayout android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginLeft="5dp"
     android:layout_marginTop="60dp"
@@ -8,38 +16,42 @@
     android:orientation="vertical"
     android:rowCount="13">
     <ImageView
-        android:id="@+id/life1"
+        android:id="@+id/heart1"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_row="0"
         android:layout_column="0"
         android:layout_columnSpan="1"
-        android:src="@drawable/heart"/>
+        android:src="@drawable/heart"
+        android:background="@android:color/transparent"/>
     <ImageView
-        android:id="@+id/life2"
+        android:id="@+id/heart2"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_row="0"
         android:layout_column="1"
         android:layout_columnSpan="1"
-        android:src="@drawable/heart"/>
+        android:src="@drawable/heart"
+        android:background="@android:color/transparent"/>
     <ImageView
-        android:id="@+id/life3"
+        android:id="@+id/heart3"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_row="0"
         android:layout_column="2"
         android:layout_columnSpan="1"
-        android:src="@drawable/heart"/>
+        android:src="@drawable/heart"
+        android:background="@android:color/transparent"/>
     <TextView
         android:id="@+id/scoreText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_row="0"
-        android:layout_column="5"
-        android:layout_columnSpan="3"
+        android:layout_column="4"
+        android:layout_columnSpan="4"
         android:textSize="35dp"
-        android:text="점수 : 000" />
+        android:text="점수 : 000"
+        android:textColor="@color/white"/>
     <ImageButton
         android:id="@+id/grid11"
         android:layout_width="50dp"
@@ -47,7 +59,8 @@
         android:layout_row="1"
         android:layout_column="0"
         android:layout_columnSpan="1"
-        android:background="#00000000"/>
+        android:background="@drawable/square_border_black"
+        android:scaleType="fitXY"/>
     <ImageButton
         android:id="@+id/grid12"
         android:layout_width="50dp"
@@ -55,7 +68,8 @@
         android:layout_row="1"
         android:layout_column="1"
         android:layout_columnSpan="1"
-        android:background="#00000000"/>
+        android:background="@drawable/square_border_black"
+        android:scaleType="fitXY"/>
     <ImageButton
         android:id="@+id/grid13"
         android:layout_width="50dp"
@@ -63,7 +77,8 @@
         android:layout_row="1"
         android:layout_column="2"
         android:layout_columnSpan="1"
-        android:background="#00000000"/>
+        android:background="@drawable/square_border_black"
+        android:scaleType="fitXY"/>
     <ImageButton
         android:id="@+id/grid14"
         android:layout_width="50dp"
@@ -71,7 +86,8 @@
         android:layout_row="1"
         android:layout_column="3"
         android:layout_columnSpan="1"
-        android:background="#00000000"/>
+        android:background="@drawable/square_border_black"
+        android:scaleType="fitXY"/>
     <ImageButton
         android:id="@+id/grid15"
         android:layout_width="50dp"
@@ -79,7 +95,8 @@
         android:layout_row="1"
         android:layout_column="4"
         android:layout_columnSpan="1"
-        android:background="#00000000"/>
+        android:background="@drawable/square_border_black"
+        android:scaleType="fitXY"/>
     <ImageButton
         android:id="@+id/grid16"
         android:layout_width="50dp"
@@ -87,7 +104,8 @@
         android:layout_row="1"
         android:layout_column="5"
         android:layout_columnSpan="1"
-        android:background="#00000000"/>
+        android:background="@drawable/square_border_black"
+        android:scaleType="fitXY"/>
     <ImageButton
         android:id="@+id/grid17"
         android:layout_width="50dp"
@@ -95,7 +113,8 @@
         android:layout_row="1"
         android:layout_column="6"
         android:layout_columnSpan="1"
-        android:background="#00000000"/>
+        android:background="@drawable/square_border_black"
+        android:scaleType="fitXY"/>
     <ImageButton
         android:id="@+id/grid18"
         android:layout_width="50dp"
@@ -103,7 +122,8 @@
         android:layout_row="1"
         android:layout_column="7"
         android:layout_columnSpan="1"
-        android:background="#00000000"/>
+        android:background="@drawable/square_border_black"
+        android:scaleType="fitXY"/>
     <ImageButton
         android:id="@+id/grid21"
         android:layout_width="50dp"
@@ -111,7 +131,8 @@
         android:layout_row="2"
         android:layout_column="0"
         android:layout_columnSpan="1"
-        android:background="#00000000"/>
+        android:background="@drawable/square_border_black"
+        android:scaleType="fitXY"/>
     <ImageButton
         android:id="@+id/grid22"
         android:layout_width="50dp"
@@ -119,7 +140,8 @@
         android:layout_row="2"
         android:layout_column="1"
         android:layout_columnSpan="1"
-        android:background="#00000000"/>
+        android:background="@drawable/square_border_black"
+        android:scaleType="fitXY"/>
     <ImageButton
         android:id="@+id/grid23"
         android:layout_width="50dp"
@@ -127,7 +149,8 @@
         android:layout_row="2"
         android:layout_column="2"
         android:layout_columnSpan="1"
-        android:background="#00000000"/>
+        android:background="@drawable/square_border_black"
+        android:scaleType="fitXY"/>
     <ImageButton
         android:id="@+id/grid24"
         android:layout_width="50dp"
@@ -135,7 +158,8 @@
         android:layout_row="2"
         android:layout_column="3"
         android:layout_columnSpan="1"
-        android:background="#00000000"/>
+        android:background="@drawable/square_border_black"
+        android:scaleType="fitXY"/>
     <ImageButton
         android:id="@+id/grid25"
         android:layout_width="50dp"
@@ -143,7 +167,8 @@
         android:layout_row="2"
         android:layout_column="4"
         android:layout_columnSpan="1"
-        android:background="#00000000"/>
+        android:background="@drawable/square_border_black"
+        android:scaleType="fitXY"/>
     <ImageButton
         android:id="@+id/grid26"
         android:layout_width="50dp"
@@ -151,7 +176,8 @@
         android:layout_row="2"
         android:layout_column="5"
         android:layout_columnSpan="1"
-        android:background="#00000000"/>
+        android:background="@drawable/square_border_black"
+        android:scaleType="fitXY"/>
     <ImageButton
         android:id="@+id/grid27"
         android:layout_width="50dp"
@@ -159,7 +185,8 @@
         android:layout_row="2"
         android:layout_column="6"
         android:layout_columnSpan="1"
-        android:background="#00000000"/>
+        android:background="@drawable/square_border_black"
+        android:scaleType="fitXY"/>
     <ImageButton
         android:id="@+id/grid28"
         android:layout_width="50dp"
@@ -167,7 +194,8 @@
         android:layout_row="2"
         android:layout_column="7"
         android:layout_columnSpan="1"
-        android:background="#00000000"/>
+        android:background="@drawable/square_border_black"
+        android:scaleType="fitXY"/>
     <ImageButton
         android:id="@+id/grid31"
         android:layout_width="50dp"
@@ -175,7 +203,8 @@
         android:layout_row="3"
         android:layout_column="0"
         android:layout_columnSpan="1"
-        android:background="#00000000"/>
+        android:background="@drawable/square_border_black"
+        android:scaleType="fitXY"/>
     <ImageButton
         android:id="@+id/grid32"
         android:layout_width="50dp"
@@ -183,7 +212,8 @@
         android:layout_row="3"
         android:layout_column="1"
         android:layout_columnSpan="1"
-        android:background="#00000000"/>
+        android:background="@drawable/square_border_black"
+        android:scaleType="fitXY"/>
     <ImageButton
         android:id="@+id/grid33"
         android:layout_width="50dp"
@@ -191,7 +221,8 @@
         android:layout_row="3"
         android:layout_column="2"
         android:layout_columnSpan="1"
-        android:background="#00000000"/>
+        android:background="@drawable/square_border_black"
+        android:scaleType="fitXY"/>
     <ImageButton
         android:id="@+id/grid34"
         android:layout_width="50dp"
@@ -199,7 +230,8 @@
         android:layout_row="3"
         android:layout_column="3"
         android:layout_columnSpan="1"
-        android:background="#00000000"/>
+        android:background="@drawable/square_border_black"
+        android:scaleType="fitXY"/>
     <ImageButton
         android:id="@+id/grid35"
         android:layout_width="50dp"
@@ -207,7 +239,8 @@
         android:layout_row="3"
         android:layout_column="4"
         android:layout_columnSpan="1"
-        android:background="#00000000"/>
+        android:background="@drawable/square_border_black"
+        android:scaleType="fitXY"/>
     <ImageButton
         android:id="@+id/grid36"
         android:layout_width="50dp"
@@ -215,7 +248,8 @@
         android:layout_row="3"
         android:layout_column="5"
         android:layout_columnSpan="1"
-        android:background="#00000000"/>
+        android:background="@drawable/square_border_black"
+        android:scaleType="fitXY"/>
     <ImageButton
         android:id="@+id/grid37"
         android:layout_width="50dp"
@@ -223,7 +257,8 @@
         android:layout_row="3"
         android:layout_column="6"
         android:layout_columnSpan="1"
-        android:background="#00000000"/>
+        android:background="@drawable/square_border_black"
+        android:scaleType="fitXY"/>
     <ImageButton
         android:id="@+id/grid38"
         android:layout_width="50dp"
@@ -231,7 +266,8 @@
         android:layout_row="3"
         android:layout_column="7"
         android:layout_columnSpan="1"
-        android:background="#00000000"/>
+        android:background="@drawable/square_border_black"
+        android:scaleType="fitXY"/>
     <ImageButton
         android:id="@+id/grid41"
         android:layout_width="50dp"
@@ -239,7 +275,8 @@
         android:layout_row="4"
         android:layout_column="0"
         android:layout_columnSpan="1"
-        android:background="#00000000"/>
+        android:background="@drawable/square_border_black"
+        android:scaleType="fitXY"/>
     <ImageButton
         android:id="@+id/grid42"
         android:layout_width="50dp"
@@ -247,7 +284,8 @@
         android:layout_row="4"
         android:layout_column="1"
         android:layout_columnSpan="1"
-        android:background="#00000000"/>
+        android:background="@drawable/square_border_black"
+        android:scaleType="fitXY"/>
     <ImageButton
         android:id="@+id/grid43"
         android:layout_width="50dp"
@@ -255,7 +293,8 @@
         android:layout_row="4"
         android:layout_column="2"
         android:layout_columnSpan="1"
-        android:background="#00000000"/>
+        android:background="@drawable/square_border_black"
+        android:scaleType="fitXY"/>
     <ImageButton
         android:id="@+id/grid44"
         android:layout_width="50dp"
@@ -263,7 +302,8 @@
         android:layout_row="4"
         android:layout_column="3"
         android:layout_columnSpan="1"
-        android:background="#00000000"/>
+        android:background="@drawable/square_border_black"
+        android:scaleType="fitXY"/>
     <ImageButton
         android:id="@+id/grid45"
         android:layout_width="50dp"
@@ -271,7 +311,8 @@
         android:layout_row="4"
         android:layout_column="4"
         android:layout_columnSpan="1"
-        android:background="#00000000"/>
+        android:background="@drawable/square_border_black"
+        android:scaleType="fitXY"/>
     <ImageButton
         android:id="@+id/grid46"
         android:layout_width="50dp"
@@ -279,7 +320,8 @@
         android:layout_row="4"
         android:layout_column="5"
         android:layout_columnSpan="1"
-        android:background="#00000000"/>
+        android:background="@drawable/square_border_black"
+        android:scaleType="fitXY"/>
     <ImageButton
         android:id="@+id/grid47"
         android:layout_width="50dp"
@@ -287,7 +329,8 @@
         android:layout_row="4"
         android:layout_column="6"
         android:layout_columnSpan="1"
-        android:background="#00000000"/>
+        android:background="@drawable/square_border_black"
+        android:scaleType="fitXY"/>
     <ImageButton
         android:id="@+id/grid48"
         android:layout_width="50dp"
@@ -295,7 +338,8 @@
         android:layout_row="4"
         android:layout_column="7"
         android:layout_columnSpan="1"
-        android:background="#00000000"/>
+        android:background="@drawable/square_border_black"
+        android:scaleType="fitXY"/>
     <ImageButton
         android:id="@+id/grid51"
         android:layout_width="50dp"
@@ -303,7 +347,8 @@
         android:layout_row="5"
         android:layout_column="0"
         android:layout_columnSpan="1"
-        android:background="#00000000"/>
+        android:background="@drawable/square_border_black"
+        android:scaleType="fitXY"/>
     <ImageButton
         android:id="@+id/grid52"
         android:layout_width="50dp"
@@ -311,7 +356,8 @@
         android:layout_row="5"
         android:layout_column="1"
         android:layout_columnSpan="1"
-        android:background="#00000000"/>
+        android:background="@drawable/square_border_black"
+        android:scaleType="fitXY"/>
     <ImageButton
         android:id="@+id/grid53"
         android:layout_width="50dp"
@@ -319,7 +365,8 @@
         android:layout_row="5"
         android:layout_column="2"
         android:layout_columnSpan="1"
-        android:background="#00000000"/>
+        android:background="@drawable/square_border_black"
+        android:scaleType="fitXY"/>
     <ImageButton
         android:id="@+id/grid54"
         android:layout_width="50dp"
@@ -327,7 +374,8 @@
         android:layout_row="5"
         android:layout_column="3"
         android:layout_columnSpan="1"
-        android:background="#00000000"/>
+        android:background="@drawable/square_border_black"
+        android:scaleType="fitXY"/>
     <ImageButton
         android:id="@+id/grid55"
         android:layout_width="50dp"
@@ -335,7 +383,8 @@
         android:layout_row="5"
         android:layout_column="4"
         android:layout_columnSpan="1"
-        android:background="#00000000"/>
+        android:background="@drawable/square_border_black"
+        android:scaleType="fitXY"/>
     <ImageButton
         android:id="@+id/grid56"
         android:layout_width="50dp"
@@ -343,7 +392,8 @@
         android:layout_row="5"
         android:layout_column="5"
         android:layout_columnSpan="1"
-        android:background="#00000000"/>
+        android:background="@drawable/square_border_black"
+        android:scaleType="fitXY"/>
     <ImageButton
         android:id="@+id/grid57"
         android:layout_width="50dp"
@@ -351,7 +401,8 @@
         android:layout_row="5"
         android:layout_column="6"
         android:layout_columnSpan="1"
-        android:background="#00000000"/>
+        android:background="@drawable/square_border_black"
+        android:scaleType="fitXY"/>
     <ImageButton
         android:id="@+id/grid58"
         android:layout_width="50dp"
@@ -359,7 +410,8 @@
         android:layout_row="5"
         android:layout_column="7"
         android:layout_columnSpan="1"
-        android:background="#00000000"/>
+        android:background="@drawable/square_border_black"
+        android:scaleType="fitXY"/>
     <ImageButton
         android:id="@+id/grid61"
         android:layout_width="50dp"
@@ -367,7 +419,8 @@
         android:layout_row="6"
         android:layout_column="0"
         android:layout_columnSpan="1"
-        android:background="#00000000"/>
+        android:background="@drawable/square_border_black"
+        android:scaleType="fitXY"/>
     <ImageButton
         android:id="@+id/grid62"
         android:layout_width="50dp"
@@ -375,7 +428,8 @@
         android:layout_row="6"
         android:layout_column="1"
         android:layout_columnSpan="1"
-        android:background="#00000000"/>
+        android:background="@drawable/square_border_black"
+        android:scaleType="fitXY"/>
     <ImageButton
         android:id="@+id/grid63"
         android:layout_width="50dp"
@@ -383,7 +437,8 @@
         android:layout_row="6"
         android:layout_column="2"
         android:layout_columnSpan="1"
-        android:background="#00000000"/>
+        android:background="@drawable/square_border_black"
+        android:scaleType="fitXY"/>
     <ImageButton
         android:id="@+id/grid64"
         android:layout_width="50dp"
@@ -391,7 +446,8 @@
         android:layout_row="6"
         android:layout_column="3"
         android:layout_columnSpan="1"
-        android:background="#00000000"/>
+        android:background="@drawable/square_border_black"
+        android:scaleType="fitXY"/>
     <ImageButton
         android:id="@+id/grid65"
         android:layout_width="50dp"
@@ -399,7 +455,8 @@
         android:layout_row="6"
         android:layout_column="4"
         android:layout_columnSpan="1"
-        android:background="#00000000"/>
+        android:background="@drawable/square_border_black"
+        android:scaleType="fitXY"/>
     <ImageButton
         android:id="@+id/grid66"
         android:layout_width="50dp"
@@ -407,7 +464,8 @@
         android:layout_row="6"
         android:layout_column="5"
         android:layout_columnSpan="1"
-        android:background="#00000000"/>
+        android:background="@drawable/square_border_black"
+        android:scaleType="fitXY"/>
     <ImageButton
         android:id="@+id/grid67"
         android:layout_width="50dp"
@@ -415,7 +473,8 @@
         android:layout_row="6"
         android:layout_column="6"
         android:layout_columnSpan="1"
-        android:background="#00000000"/>
+        android:background="@drawable/square_border_black"
+        android:scaleType="fitXY"/>
     <ImageButton
         android:id="@+id/grid68"
         android:layout_width="50dp"
@@ -423,7 +482,8 @@
         android:layout_row="6"
         android:layout_column="7"
         android:layout_columnSpan="1"
-        android:background="#00000000"/>
+        android:background="@drawable/square_border_black"
+        android:scaleType="fitXY"/>
     <ImageButton
         android:id="@+id/grid71"
         android:layout_width="50dp"
@@ -431,7 +491,8 @@
         android:layout_row="7"
         android:layout_column="0"
         android:layout_columnSpan="1"
-        android:background="#00000000"/>
+        android:background="@drawable/square_border_black"
+        android:scaleType="fitXY"/>
     <ImageButton
         android:id="@+id/grid72"
         android:layout_width="50dp"
@@ -439,7 +500,8 @@
         android:layout_row="7"
         android:layout_column="1"
         android:layout_columnSpan="1"
-        android:background="#00000000"/>
+        android:background="@drawable/square_border_black"
+        android:scaleType="fitXY"/>
     <ImageButton
         android:id="@+id/grid73"
         android:layout_width="50dp"
@@ -447,7 +509,8 @@
         android:layout_row="7"
         android:layout_column="2"
         android:layout_columnSpan="1"
-        android:background="#00000000"/>
+        android:background="@drawable/square_border_black"
+        android:scaleType="fitXY"/>
     <ImageButton
         android:id="@+id/grid74"
         android:layout_width="50dp"
@@ -455,7 +518,8 @@
         android:layout_row="7"
         android:layout_column="3"
         android:layout_columnSpan="1"
-        android:background="#00000000"/>
+        android:background="@drawable/square_border_black"
+        android:scaleType="fitXY"/>
     <ImageButton
         android:id="@+id/grid75"
         android:layout_width="50dp"
@@ -463,7 +527,8 @@
         android:layout_row="7"
         android:layout_column="4"
         android:layout_columnSpan="1"
-        android:background="#00000000"/>
+        android:background="@drawable/square_border_black"
+        android:scaleType="fitXY"/>
     <ImageButton
         android:id="@+id/grid76"
         android:layout_width="50dp"
@@ -471,7 +536,8 @@
         android:layout_row="7"
         android:layout_column="5"
         android:layout_columnSpan="1"
-        android:background="#00000000"/>
+        android:background="@drawable/square_border_black"
+        android:scaleType="fitXY"/>
     <ImageButton
         android:id="@+id/grid77"
         android:layout_width="50dp"
@@ -479,7 +545,8 @@
         android:layout_row="7"
         android:layout_column="6"
         android:layout_columnSpan="1"
-        android:background="#00000000"/>
+        android:background="@drawable/square_border_black"
+        android:scaleType="fitXY"/>
     <ImageButton
         android:id="@+id/grid78"
         android:layout_width="50dp"
@@ -487,7 +554,8 @@
         android:layout_row="7"
         android:layout_column="7"
         android:layout_columnSpan="1"
-        android:background="#00000000"/>
+        android:background="@drawable/square_border_black"
+        android:scaleType="fitXY"/>
     <ImageButton
         android:id="@+id/grid81"
         android:layout_width="50dp"
@@ -495,7 +563,8 @@
         android:layout_row="8"
         android:layout_column="0"
         android:layout_columnSpan="1"
-        android:background="#00000000"/>
+        android:background="@drawable/square_border_black"
+        android:scaleType="fitXY"/>
     <ImageButton
         android:id="@+id/grid82"
         android:layout_width="50dp"
@@ -503,7 +572,8 @@
         android:layout_row="8"
         android:layout_column="1"
         android:layout_columnSpan="1"
-        android:background="#00000000"/>
+        android:background="@drawable/square_border_black"
+        android:scaleType="fitXY"/>
     <ImageButton
         android:id="@+id/grid83"
         android:layout_width="50dp"
@@ -511,7 +581,8 @@
         android:layout_row="8"
         android:layout_column="2"
         android:layout_columnSpan="1"
-        android:background="#00000000"/>
+        android:background="@drawable/square_border_black"
+        android:scaleType="fitXY"/>
     <ImageButton
         android:id="@+id/grid84"
         android:layout_width="50dp"
@@ -519,7 +590,8 @@
         android:layout_row="8"
         android:layout_column="3"
         android:layout_columnSpan="1"
-        android:background="#00000000"/>
+        android:background="@drawable/square_border_black"
+        android:scaleType="fitXY"/>
     <ImageButton
         android:id="@+id/grid85"
         android:layout_width="50dp"
@@ -527,7 +599,8 @@
         android:layout_row="8"
         android:layout_column="4"
         android:layout_columnSpan="1"
-        android:background="#00000000"/>
+        android:background="@drawable/square_border_black"
+        android:scaleType="fitXY"/>
     <ImageButton
         android:id="@+id/grid86"
         android:layout_width="50dp"
@@ -535,7 +608,8 @@
         android:layout_row="8"
         android:layout_column="5"
         android:layout_columnSpan="1"
-        android:background="#00000000"/>
+        android:background="@drawable/square_border_black"
+        android:scaleType="fitXY"/>
     <ImageButton
         android:id="@+id/grid87"
         android:layout_width="50dp"
@@ -543,7 +617,8 @@
         android:layout_row="8"
         android:layout_column="6"
         android:layout_columnSpan="1"
-        android:background="#00000000"/>
+        android:background="@drawable/square_border_black"
+        android:scaleType="fitXY"/>
     <ImageButton
         android:id="@+id/grid88"
         android:layout_width="50dp"
@@ -551,18 +626,20 @@
         android:layout_row="8"
         android:layout_column="7"
         android:layout_columnSpan="1"
-        android:background="#00000000"/>
+        android:background="@drawable/square_border_black"
+        android:scaleType="fitXY"/>
     <ImageButton
         android:id="@+id/upKey"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="50dp"
         android:layout_row="9"
         android:layout_column="3"
         android:layout_columnSpan="2"
-        android:src="@drawable/upkey"/>
-    <ImageView
+        android:src="@drawable/upkey"
+        android:scaleType="fitXY"/>
+    <ImageButton
         android:id="@+id/leftKey"
         android:layout_width="60dp"
         android:layout_height="60dp"
@@ -570,8 +647,9 @@
         android:layout_row="11"
         android:layout_column="2"
         android:layout_columnSpan="2"
-        android:src="@drawable/leftkey"/>
-    <ImageView
+        android:src="@drawable/leftkey"
+        android:scaleType="fitXY"/>
+    <ImageButton
         android:id="@+id/downKey"
         android:layout_width="60dp"
         android:layout_height="60dp"
@@ -580,8 +658,9 @@
         android:layout_row="11"
         android:layout_column="3"
         android:layout_columnSpan="2"
-        android:src="@drawable/downkey"/>
-    <ImageView
+        android:src="@drawable/downkey"
+        android:scaleType="fitXY"/>
+    <ImageButton
         android:id="@+id/rightKey"
         android:layout_width="60dp"
         android:layout_height="60dp"
@@ -590,5 +669,7 @@
         android:layout_row="11"
         android:layout_column="4"
         android:layout_columnSpan="2"
-        android:src="@drawable/rightkey"/>
+        android:src="@drawable/rightkey"
+        android:scaleType="fitXY"/>
 </GridLayout>
+    </LinearLayout>
